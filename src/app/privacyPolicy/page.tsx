@@ -1,15 +1,18 @@
+import Footer from '@/components/Footer'
+import Navbar from '@/components/Navbar'
 import { generalTerms, permissionSection, privacyPolicyIntro, securityanduserrestriction, useofdis, useofinfo, userInformation } from '@/data/PrivacyPolicy'
 import React from 'react'
 
 export default function page() {
     return (
         <section>
+            <Navbar />
             <div className="bg-gradient-to-r from-cyan-400 to-cyan-600 text-white py-16 text-center">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
                 <h5>Last updated: January 15, 2025</h5>
             </div>
 
-            <div className="max-w-4xl mx-auto px-6 py-12">
+            <div className="max-w-6xl mx-auto px-6 py-12">
                 {/* Introduction */}
                 <div className="bg-white rounded-lg shadow-lg p-8 mb-8 border-l-4 border-cyan-400">
                     <h2 className="text-2xl font-semibold text-gray-800 mb-6">
@@ -123,6 +126,7 @@ export default function page() {
                     This Policy shall be governed by Indian Law and the courts in Pune shall only have exclusive jurisdiction to resolve any disputes.
                 </p>
             </div>
+            <Footer />
         </section>
 
     )

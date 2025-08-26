@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.mdHeading{
+    @apply text-cyan-500 text-lg sm:text-xl font-bold 
+}

@@ -1,6 +1,8 @@
 "use client"
 import React, { useState } from 'react'
 import { generalTerms, License, pricing, restrictions, Definitions, CancellationandRefundPolicy, YourSuggestions, YourConsent, LinkstoOtherWebsites, ChangesToOurTermsConditions, ModificationstoOurapp, UpdatestoOurapp, ThirdPartyServices, CopyrightInfringementNotice, Indemnification, NoWarranties, LimitationofLiability, Severability, Waiver, UpdatestoOurTerms, IntellectualProperty, AgreementtoArbitrate, NoticeofDispute, BindingArbitration, SubmissionsandPrivacy, Promotions, TypographicalErrors, Miscellaneous, Disclaimer } from "@/data/TermsOfService"
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export default function page() {
     const [activeSection, setActiveSection] = useState(null);
@@ -11,12 +13,13 @@ export default function page() {
 
     return (
         <section>
+            <Navbar />
             <div className="bg-gradient-to-r from-cyan-400 to-cyan-600 text-white py-16 text-center">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">Terms of Service</h1>
                 <h5>Last updated: January 15, 2025</h5>
             </div>
 
-            <div className="max-w-4xl mx-auto px-6 py-12">
+            <div className="max-w-6xl mx-auto px-6 py-12">
                 {/* Introduction */}
                 <div className="bg-white rounded-lg shadow-lg p-8 mb-8 border-l-4 border-cyan-400">
                     <h2 className="text-2xl font-semibold text-gray-800 mb-4">Welcome to B2B Surge</h2>
@@ -903,6 +906,7 @@ export default function page() {
                 </div>
 
             </div>
+            <Footer />
         </section>
     )
 }
