@@ -1,6 +1,6 @@
 import network from "../../public/Features/network.svg"
 import meeting from "../../public/Features/meeting.svg"
-import profileMan from "../../public/Features/profileManagement.jpg"
+import profileMan from "../../public/Features/profileManagement.png"
 import subcription from "../../public/Features/download.png"
 import adminSupport from "../../public/Features/AdminSupport.jpg"
 import banner from "../../public/Features/PromotionalBanners.png"

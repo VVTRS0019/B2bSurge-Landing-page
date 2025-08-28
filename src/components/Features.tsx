@@ -5,14 +5,14 @@ import React from 'react'
 
 export default function Features() {
   return (
-    <section id="features" className="py-10 sm:py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
+    <section id="features" className="max-w-6xl mx-auto pt-10 sm:pt-20">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
-          <div className="inline-block px-4 py-2 bg-[#00BCD4]/10 text-cyan-500 rounded-full text-sm font-medium">
+          <div className="inline-block px-4 py-6 sm:py-2 bg-[#00BCD4]/10 text-cyan-500 rounded-full text-sm font-medium">
             Platform Features
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-zinc-900 py-6 sm:py-0">
             Everything You Need to
             <span className="text-cyan-500"> Succeed</span>
           </h2>
@@ -23,11 +23,11 @@ export default function Features() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {FeaturesData.map((feature, index) => (
             <div
               key={feature.title}
-              className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition duration-300 cursor-pointer border border-gray-100"
+              className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition duration-300 cursor-pointer border border-gray-100 hover:bg-cyan-50"
               style={{
                 animationDelay: `${index * 0.1}s`,
                 animation: 'fadeInUp 0.6s ease-out forwards'
@@ -38,7 +38,7 @@ export default function Features() {
                 <Image
                   src={feature.icon}
                   alt={feature.title}
-                  className="w-14 h-14 object-contain border-2 border-black p-2 mix-blend-multiply rounded-2xl"
+                  className="w-14 h-14 object-contain border-2 border-zinc-900 p-2 mix-blend-multiply rounded-2xl"
                 />
               </div>
 
@@ -55,7 +55,7 @@ export default function Features() {
 
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-16 mb-6">
           <div className="inline-flex items-center space-x-2 text-gray-600">
             <span>Want to see more features?</span>
             <button

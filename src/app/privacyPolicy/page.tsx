@@ -52,12 +52,12 @@ export default function page() {
                     <p className='leading-relaxed tracking-wide py-2'>
                         The User Information is primarily used by Techriigour to facilitate a better, customized and convenient use of The Application services. The User Information is used by Techriigour inter alia to
                     </p>
-                    {useofinfo.map((data, index) => (
-                        <ul className="list-disc list-inside text-gray-600 space-y-2">
+                    <ul className="list-disc list-inside text-gray-600 space-y-2">
+                        {useofinfo.map((data, index) => (
                             <li key={index} className='leading-relaxed tracking-wide py-2'>{data}</li>
-                        </ul>
 
-                    ))}
+                        ))}
+                    </ul>
 
                     <p className='leading-relaxed tracking-wide py-2 text-gray-600'>
                         User Information is used and disclosed if required to do so by the governing law or in the good faith and belief that such disclosure is reasonably necessary to respond to notices, court orders, or other legal process. Techriigour may disclose the User Information to law enforcement firms/officers, third party rights owners, or other that is in its opinion reasonably necessary to enforce The Application’s Terms of Use, this Policy and Terms and Conditions of specific Brand/s. Techriigour will share some or all of the User Information with another entity should Techriigour merge with, or be acquired by that entity or receive investments from that entity, or moves in partnership with that entity.

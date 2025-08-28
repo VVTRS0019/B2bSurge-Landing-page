@@ -29,6 +29,10 @@ export const permissionSection: PermissionInterface[] = [
     title: "Email Id",
     Desc: "The Email ID of the user is used as an identification for the user of the application to login and access the application. ",
   },
+  {
+    title: "Google Sign-In and Calendar Access",
+    Desc: "Our application uses Google Sign-In to authenticate users securely and to access their Google Calendar. This access is used solely to add events and meeting alerts to the user’s calendar for better scheduling and reminders. We do not store or share your calendar data with third parties, and access is limited to the permissions required for this functionality.",
+  },
 ];
 
 export const userInformation: string[] = [
