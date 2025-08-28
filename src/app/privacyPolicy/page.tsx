@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar'
 import { generalTerms, permissionSection, privacyPolicyIntro, securityanduserrestriction, useofdis, useofinfo, userInformation } from '@/data/PrivacyPolicy'
 import React from 'react'
 
-export default function page() {
+export default function Page() {
     return (
         <section>
             <Navbar />
@@ -102,9 +102,9 @@ export default function page() {
                         Questions About These Policies?
                     </h3>
                     <p className="text-gray-700 leading-relaxed mb-6">
-                        If you have any questions about these Privacy and Policy, please don't hesitate to contact us.
-                        We're here to help clarify any concerns you may have.
+                        {"If you have any questions about these Privacy and Policy, please don't hesitate to contact us. We're here to help clarify any concerns you may have."}
                     </p>
+
                     <div className="grid md:grid-cols-2 gap-6">
                         <div className="flex items-center text-gray-700">
                             <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm mr-3">✉️</span>

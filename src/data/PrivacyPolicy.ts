@@ -8,8 +8,8 @@ export const privacyPolicyIntro: string[] = [
 ];
 
 interface PermissionInterface {
-  title: String;
-  Desc: String;
+  title: string;
+  Desc: string;
 }
 
 export const permissionSection: PermissionInterface[] = [

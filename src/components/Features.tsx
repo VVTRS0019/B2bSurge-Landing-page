@@ -17,9 +17,9 @@ export default function Features() {
             <span className="text-cyan-500"> Succeed</span>
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Our comprehensive suite of tools and features is designed to help businesses
+            {`Our comprehensive suite of tools and features is designed to help businesses
             connect, collaborate, and grow together in today's interconnected world.
-          </p>
+          `}</p>
         </div>
 
         {/* Features Grid */}

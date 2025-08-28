@@ -1,13 +1,14 @@
 "use client"
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { generalTerms, License, pricing, restrictions, Definitions, CancellationandRefundPolicy, YourSuggestions, YourConsent, LinkstoOtherWebsites, ChangesToOurTermsConditions, ModificationstoOurapp, UpdatestoOurapp, ThirdPartyServices, CopyrightInfringementNotice, Indemnification, NoWarranties, LimitationofLiability, Severability, Waiver, UpdatestoOurTerms, IntellectualProperty, AgreementtoArbitrate, NoticeofDispute, BindingArbitration, SubmissionsandPrivacy, Promotions, TypographicalErrors, Miscellaneous, Disclaimer } from "@/data/TermsOfService"
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { AiFillUpCircle } from 'react-icons/ai';
 
-export default function page() {
-    const [activeSection, setActiveSection] = useState(null);
+export default function Page() {
+    const [activeSection, setActiveSection] = useState<string | null>(null);;
 
-    const toggleSection = (section: any) => {
+    const toggleSection = (section: string) => {
         setActiveSection(activeSection === section ? null : section);
     };
 
@@ -24,9 +25,9 @@ export default function page() {
                 <div className="bg-white rounded-lg shadow-lg p-8 mb-8 border-l-4 border-cyan-400">
                     <h2 className="text-2xl font-semibold text-gray-800 mb-4">Welcome to B2B Surge</h2>
                     <p className="text-gray-600 leading-relaxed">
-                        These Terms and Conditions ("Terms") govern your use of B2B Surge platform and services.
+                       {` These Terms and Conditions ("Terms") govern your use of B2B Surge platform and services.
                         By accessing or using our platform, you agree to be bound by these Terms. If you do not
-                        agree to these Terms, please do not use our services.
+                        agree to these Terms, please do not use our services.`}
                     </p>
                 </div>
 
@@ -42,8 +43,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">1</span>
                                     General Terms
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'acceptance' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'acceptance' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -72,8 +73,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">2</span>
                                     License
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'license' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'license' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -101,8 +102,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">3</span>
                                     Definitions
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'definitions' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'definitions' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -133,8 +134,8 @@ export default function page() {
                                         (You agree not to, and you will not permit others to)
                                     </span>
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'restrictions' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'restrictions' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -162,8 +163,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">5</span>
                                     Pricing
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'price' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'price' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -191,8 +192,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">6</span>
                                     Cancellation and Refund Policy
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'cancel' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'cancel' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -220,8 +221,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">7</span>
                                     Your Suggestions
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'suggust' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'suggust' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -249,8 +250,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">8</span>
                                     Your Consent
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'consent' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'consent' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -278,8 +279,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">9</span>
                                     Links to Other Websites
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'links' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'links' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -307,8 +308,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">10</span>
                                     Changes To Our Terms & Conditions
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'changeTo' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'changeTo' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -336,8 +337,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">11</span>
                                     Modifications to Our app
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'modification' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'modification' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -365,8 +366,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">12</span>
                                     Third-Party Services
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'third' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'third' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -394,8 +395,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">13</span>
                                     Copyright Infringement Notice
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'copy' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'copy' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -423,8 +424,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">14</span>
                                     Indemnification
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'Indemnification' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'Indemnification' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -452,8 +453,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">15</span>
                                     No Warranties
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'NoWarranties' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'NoWarranties' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -481,8 +482,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">16</span>
                                     Limitation of Liability
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'LimitationofLiability' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'LimitationofLiability' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -510,8 +511,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">17</span>
                                     Severability
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'severability' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'severability' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -539,8 +540,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">18</span>
                                     Waiver
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'waiver' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'waiver' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -569,8 +570,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">19</span>
                                     Updates to Our Terms
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'UpdatestoOurTerms' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'UpdatestoOurTerms' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -598,8 +599,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">20</span>
                                     Intellectual Property
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'IntellectualProperty' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'IntellectualProperty' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -627,8 +628,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">21</span>
                                     Agreement to Arbitrate
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'AgreementtoArbitrate' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'AgreementtoArbitrate' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -656,8 +657,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">22</span>
                                     Notice of Dispute
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'NoticeofDispute' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'NoticeofDispute' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -685,8 +686,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">23</span>
                                     Binding Arbitration
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'BindingArbitration' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'BindingArbitration' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -714,8 +715,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">24</span>
                                     Submissions and Privacy
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'SubmissionsandPrivacy' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'SubmissionsandPrivacy' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -743,8 +744,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">25</span>
                                     Promotions
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'Promotions' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'Promotions' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -772,8 +773,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">26</span>
                                     Typographical Errors
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'TypographicalErrors' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'TypographicalErrors' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -801,8 +802,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">27</span>
                                     Miscellaneous
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'Miscellaneous' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'Miscellaneous' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -830,8 +831,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">28</span>
                                     Disclaimer
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'Disclaimer' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'Disclaimer' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -859,8 +860,8 @@ export default function page() {
                                     <span className="w-8 h-8 bg-cyan-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">29</span>
                                     Updates to Our App
                                 </h3>
-                                <span className={`text-cyan-400 transform transition-transform ${activeSection === 'UpdatestoOurapp' ? 'rotate-180' : ''}`}>
-                                    ▼
+                                <span className={`text-cyan-400 text-3xl transform transition-transform ${activeSection !== 'UpdatestoOurapp' ? 'rotate-180' : ''}`}>
+                                    <AiFillUpCircle />
                                 </span>
                             </div>
                         </button>
@@ -884,8 +885,8 @@ export default function page() {
                         Questions About These Terms?
                     </h3>
                     <p className="text-gray-700 leading-relaxed mb-6">
-                        If you have any questions about these Terms and Conditions, please don't hesitate to contact us.
-                        We're here to help clarify any concerns you may have.
+                        {`If you have any questions about these Terms and Conditions, please don't hesitate to contact us.
+                        We're here to help clarify any concerns you may have.`}
                     </p>
                     <div className="grid md:grid-cols-2 gap-6">
                         <div className="flex items-center text-gray-700">
